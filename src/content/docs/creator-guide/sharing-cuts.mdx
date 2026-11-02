@@ -1,0 +1,44 @@
+---
+title: Sharing Review Links
+description: How to share secure review links with your clients and control download permissions.
+sidebar:
+  order: 3
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+Sharing a cut in CrewCut is built to remove all friction. There are no permission requests, no client password resets, and no *"I can't open this link"* messages.
+
+---
+
+## How to Copy a Review Link
+
+1. Hover over any video card in your library and click **Share cut** (or open the video and click the **Share** button in the top right).
+2. Click **Copy Link**.
+3. A private link like `https://app.crewcut.in/review/v/abc123xyz` is copied to your clipboard.
+
+Anyone with this link can watch the video and leave comments immediately.
+
+---
+
+## Download Settings
+
+When you click **Share**, you will see a toggle for **"Allow file download"**:
+
+- **Off (Default)**: Clients can stream and comment on the video, but no download button is shown.
+- **On**: A download button appears on the review page, allowing the client to download the original exported video file.
+
+:::tip[Protecting Drafts]
+Keep downloads turned **off** for early drafts so clients don't mistakenly post an unapproved or watermarked edit to social media. Turn it on when delivering the final approved master!
+:::
+
+---
+
+## Link Security & Expiration
+
+Each review link is cryptographically signed. Video streams are delivered through time-limited CDN tokens:
+- Direct video URLs cannot be scraped or hotlinked.
+- If you delete a video from your library, the review link is invalidated immediately.
+- If your account hits its monthly delivery bandwidth limit, public review links pause automatically to protect you from surprise charges.
+
+<FeedbackWidget />

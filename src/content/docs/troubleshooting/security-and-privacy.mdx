@@ -1,0 +1,46 @@
+---
+title: Security & Privacy
+description: How your video cuts are encrypted, protected from unauthorized downloads, and kept private.
+sidebar:
+  order: 3
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+When working on unreleased commercial ads, confidential films, or sensitive client footage, security is critical.
+
+Here is how CrewCut safeguards your video media and data.
+
+---
+
+## 1. Token-Authenticated Video Delivery
+
+Your video files are never exposed via public static URLs. 
+- Every video stream is guarded by **Bunny Token Authentication** with SHA256 hashed signatures.
+- Tokens expire on-demand and are tied to your specific review session.
+- Third parties cannot scrape, leech, or hotlink your video stream into external players.
+
+---
+
+## 2. Review Links Are Secret URLs
+
+Review links use cryptographically random high-entropy identifiers (e.g. `/review/v/7f9a2b8e...`):
+- They are **unlisted**: search engines like Google and Bing are instructed never to index review pages.
+- Only people you give the link to can view the cut.
+- If you ever need to revoke access, simply delete the video from your library. The link goes dead instantly.
+
+---
+
+## 3. Strict Download Controls
+
+- Reviewer downloads are **disabled by default**.
+- Unless you specifically toggle on **"Allow file download"** in the share modal, there is no download button for viewers.
+
+---
+
+## 4. Account & Payment Data Security
+
+- **Database & Auth**: Hosted on Supabase with Row Level Security (RLS) enabled across all tables, ensuring only authenticated video owners can modify their assets.
+- **Payment Security**: Razorpay handles all card, UPI, and bank transactions with RBI-mandated PCI-DSS Level 1 compliance. CrewCut never sees or stores your credit card numbers or UPI PINs.
+
+<FeedbackWidget />

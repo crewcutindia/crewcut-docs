@@ -1,0 +1,59 @@
+---
+// FeedbackWidget.astro - "Was this page helpful?" widget
+---
+
+<div class="feedback-container not-content" id="doc-feedback-widget">
+  <div class="feedback-prompt" id="feedback-prompt-text">
+    <span class="feedback-text">Was this page helpful?</span>
+  </div>
+  <div class="feedback-buttons" id="feedback-buttons">
+    <button type="button" class="feedback-btn" id="feedback-yes" aria-label="Yes, this page was helpful">
+      <span>👍</span> Yes
+    </button>
+    <button type="button" class="feedback-btn" id="feedback-no" aria-label="No, this page was not helpful">
+      <span>👎</span> No
+    </button>
+  </div>
+  <div class="feedback-thankyou" id="feedback-thankyou" style="display: none;">
+    ✓ Thank you for your feedback!
+  </div>
+</div>
+
+<script>
+  function initFeedback() {
+    const pageKey = 'feedback_' + window.location.pathname;
+    const widget = document.getElementById('doc-feedback-widget');
+    const buttons = document.getElementById('feedback-buttons');
+    const thankYou = document.getElementById('feedback-thankyou');
+    const promptText = document.getElementById('feedback-prompt-text');
+
+    if (!widget || !buttons || !thankYou || !promptText) return;
+
+    // Check if already voted
+    if (localStorage.getItem(pageKey)) {
+      buttons.style.display = 'none';
+      promptText.style.display = 'none';
+      thankYou.style.display = 'block';
+      thankYou.textContent = '✓ You rated this page helpful';
+      return;
+    }
+
+    const handleVote = (vote: string) => {
+      try {
+        localStorage.setItem(pageKey, vote);
+      } catch (e) {
+        // ignore localstorage errors
+      }
+      buttons.style.display = 'none';
+      promptText.style.display = 'none';
+      thankYou.style.display = 'block';
+    };
+
+    document.getElementById('feedback-yes')?.addEventListener('click', () => handleVote('yes'));
+    document.getElementById('feedback-no')?.addEventListener('click', () => handleVote('no'));
+  }
+
+  // Initialize on load and client navigation
+  initFeedback();
+  document.addEventListener('astro:page-load', initFeedback);
+</script>

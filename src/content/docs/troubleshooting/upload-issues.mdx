@@ -1,0 +1,40 @@
+---
+title: Upload Issues & Resuming
+description: Troubleshooting interrupted uploads, slow network speeds, and browser tips.
+sidebar:
+  order: 1
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+If your video upload seems stuck or is taking longer than expected, here is how to resolve it quickly.
+
+---
+
+## 1. What to Do if an Upload Pauses
+
+Because CrewCut uses the **TUS resumable upload protocol**, temporary network drops do not destroy your upload progress.
+
+- **Check Your Internet Connection**: If you are on Wi-Fi or a mobile hotspot, confirm your connection is active.
+- **Keep the Tab Open**: Do not close or hard-refresh the tab while the progress bar shows an active upload. If the connection reconnects within a few minutes, the upload automatically continues.
+- **If It Gets Stuck for Over 5 Minutes**: Refresh the page, select the exact same file again, and click upload. The uploader checks the server chunk cache and resumes from where it stopped.
+
+---
+
+## 2. Speeding Up Slow Uploads
+
+If uploading a 2 GB file is taking too long:
+1. **Switch Codec to H.264**: ProRes or uncompressed QuickTime files are enormous (often 10–20 GB for a short video). Exporting an H.264 draft cut at 12–15 Mbps reduces file size by 80% with virtually no visible difference on client screens.
+2. **Disable Heavy VPNs**: Some VPNs throttle large video transfers. Try pausing your VPN during the upload.
+3. **Use Google Chrome or Brave**: Modern Chromium browsers have the most efficient stream chunk buffers for large file transfers.
+
+---
+
+## 3. "Storage Quota Exceeded" Error
+
+If an upload fails with a quota alert:
+- Check your remaining account storage on your dashboard.
+- Remember the **$\sim 1.5\times$ Bunny encoding rule**: if your file is 1 GB, your account needs $\sim 1.5$ GB of available room for the transcoded web renditions.
+- Delete older completed cuts or [upgrade your plan](/plans-invoices/pricing-plans/) to increase your storage.
+
+<FeedbackWidget />

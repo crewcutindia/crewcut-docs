@@ -1,0 +1,56 @@
+---
+title: Supported Video Formats
+description: Video containers, codecs, resolutions, and recommendations for fast exports and smooth streaming.
+sidebar:
+  order: 3
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+CrewCut accepts almost any video format exported from popular editing suites like Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro, CapCut, and After Effects.
+
+---
+
+## Supported File Containers
+
+| Container Format | File Extension | Status | Recommended Settings |
+|---|---|---|---|
+| **MP4** | `.mp4` | **Best (Recommended)** | H.264 or H.265 (HEVC), AAC Audio |
+| **QuickTime** | `.mov` | Supported | ProRes 422, H.264, or Animation codec |
+| **WebM** | `.webm` | Supported | VP9 or AV1, Opus audio |
+| **MPEG-TS / MKV** | `.mkv`, `.ts` | Supported | Web-standard codecs |
+
+---
+
+## Export Recommendations for Fastest Uploads
+
+When you are sending a draft cut for client review, speed is key:
+
+1. **Resolution**: 1080p (Full HD) is standard for quick reviews and uploads smoothly on mobile networks. 4K is also supported if your plan has enough storage.
+2. **Codec**: **H.264** provides the fastest browser upload and instant web transcoding.
+3. **Bitrate**: 
+   - 1080p: Target **10–15 Mbps** (VBR 1-pass).
+   - 4K: Target **25–40 Mbps**.
+4. **Audio**: Stereo AAC at **192 kbps** or **320 kbps**, 48 kHz.
+
+:::tip[Export Presets in DaVinci & Premiere]
+In DaVinci Resolve or Premiere Pro, selecting the **"YouTube 1080p"** or **"Vimeo 1080p"** export preset creates the sweet spot between crisp image quality and compact file size.
+:::
+
+---
+
+## File Size Limits
+
+- **Free Tier**: Up to the remaining free storage in your account (2 GB total account cap).
+- **Starter, Plus, and Studio**: Single files up to **10 GB** per cut.
+- **Contributor Uploads**: Shared folder uploads from guests are capped at **500 MB** per file to prevent quota exhaustion.
+
+---
+
+## What Happens After You Upload?
+
+Once your file finishes uploading, our cloud video pipeline (Bunny Stream) encodes your video into adaptive bitrate streaming (HLS). This means:
+- Clients on fast Wi-Fi automatically get crisp, high-definition playback.
+- Clients on mobile data stream smoothly without stuttering or buffering.
+
+<FeedbackWidget />

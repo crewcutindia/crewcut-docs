@@ -1,0 +1,65 @@
+---
+title: Welcome to CrewCut Docs
+description: Everything you need to know about uploading cuts, sharing review links, and receiving exact timestamped client feedback.
+template: splash
+hero:
+  tagline: Fast, friction-free video review for creators and editors. No client logins, no confusion.
+  image:
+    file: ../../assets/crewcut-logo.png
+  actions:
+    - text: 3-Minute Quickstart
+      link: /getting-started/quickstart/
+      icon: right-arrow
+      variant: primary
+    - text: Open CrewCut App
+      link: https://app.crewcut.in
+      icon: external
+      variant: secondary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import FeedbackWidget from '../../components/FeedbackWidget.astro';
+
+## What would you like to do?
+
+<CardGrid stagger>
+  <Card title="Start in 3 Minutes" icon="rocket">
+    Learn how to upload your first cut, copy your review link, and share it with your client.
+    
+    [Read Quickstart →](/getting-started/quickstart/)
+  </Card>
+
+  <Card title="Creator Guide" icon="pencil">
+    Organize single-level folders, manage uploads, handle contributor files, and track client notes.
+    
+    [Explore Creator Guide →](/creator-guide/uploading-videos/)
+  </Card>
+
+  <Card title="Reviewer Guide (Zero Login)" icon="approve-check">
+    How clients watch cuts, scrub to the exact frame, and post timestamped comments without an account.
+    
+    [See Reviewer Experience →](/reviewer-guide/reviewing-a-cut/)
+  </Card>
+
+  <Card title="Storage & Bandwidth" icon="seti:config">
+    Understand how video storage is calculated and how monthly delivery bandwidth caps protect you.
+    
+    [Learn About Quotas →](/storage-bandwidth/understanding-quotas/)
+  </Card>
+
+  <Card title="Plans & Invoices" icon="document">
+    Compare plans in INR (Free, Starter, Plus, Studio), pay via Razorpay, and download GST receipts.
+    
+    [View Pricing & Invoices →](/plans-invoices/pricing-plans/)
+  </Card>
+
+  <Card title="Troubleshooting & FAQ" icon="warning">
+    Fix interrupted uploads, check browser compatibility, and understand video privacy.
+    
+    [Get Quick Answers →](/troubleshooting/upload-issues/)
+  </Card>
+</CardGrid>
+
+---
+
+<FeedbackWidget />

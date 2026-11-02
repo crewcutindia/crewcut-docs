@@ -1,0 +1,50 @@
+---
+title: Uploading Videos
+description: How direct resumable TUS uploads keep your video uploads reliable on any network.
+sidebar:
+  order: 1
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+Uploading gigabytes of video footage on Indian home broadband or 4G/5G mobile hotspots used to be risky—one small network hitch and the upload failed.
+
+CrewCut uses **direct resumable chunk-based uploads** (the open **TUS** protocol). Here is how it works and how to get the most out of it.
+
+---
+
+## How Direct Resumable Upload Works
+
+When you drag a video into CrewCut:
+1. **Direct Connection**: Your file streams directly from your web browser to our CDN video servers (Bunny Stream). It never routes through intermediary servers, which maximizes your upload speed.
+2. **Chunked Transfers**: The video is broken down into small, verified data chunks.
+3. **Automatic Resume**: If your Wi-Fi flickers, your phone switches towers, or your laptop sleeps, the upload automatically pauses. When the connection returns, it **resumes from the last saved chunk** instead of starting over.
+
+:::tip[Keep the Tab Open]
+While uploads are resilient to brief disconnects, you should keep the browser tab open until the progress bar reaches 100% and displays **"Processing completed"**.
+:::
+
+---
+
+## Step-by-Step: Uploading a Cut
+
+1. From your **Library**, click the **Upload Cut** button.
+2. Either drag your video file into the box or click **Browse Files**.
+3. Choose the target folder (or leave it in your root library).
+4. Watch the progress bar show current upload speed and percentage.
+5. Once uploaded, transcoding begins automatically. You will see a thumbnail appear as soon as the cut is ready to watch.
+
+---
+
+## Replacing Revised Cuts (v1 Workflow)
+
+When your client gives feedback and you render an updated draft:
+- In CrewCut v1, simply upload the new cut as a fresh video (e.g., `BrandFilm_v2.mp4`).
+- Group both cuts in the same client folder to keep your project organized.
+- Copy and share the new link with your client.
+
+:::note[Why No Version Stacks?]
+To keep CrewCut fast and free of clutter, v1 treats each video file cleanly on its own. You can delete older draft cuts whenever you need to free up storage space.
+:::
+
+<FeedbackWidget />

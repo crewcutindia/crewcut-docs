@@ -1,0 +1,20 @@
+{
+  "name": "crewcut-docs",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Documentation for CrewCut — video review and feedback platform",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.32.0",
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

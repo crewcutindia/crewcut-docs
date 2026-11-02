@@ -1,0 +1,44 @@
+---
+title: Managing Feedback & Comments
+description: Reviewing client notes, jumping to exact timecodes, resolving feedback, and threaded replies.
+sidebar:
+  order: 4
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+When a client watches your review link and submits feedback, their comments appear in real time in your comment feed.
+
+---
+
+## The Comments Sidebar
+
+Open any video in your authenticated CrewCut library to see the **Feedback Panel** on the right side of the video player:
+
+1. **Exact Timecode Tag**: Every comment shows the exact second it was placed (e.g., `00:32` or `01:45`).
+2. **Jump to Frame**: Click any timestamp badge to instantly jump the video player to that exact moment.
+3. **Comment Markers on the Timeline**: Small dots appear along the video timeline scrub bar. Hovering over a dot shows a quick preview of that comment.
+
+---
+
+## Replying to Comments
+
+Communication stays clean and organized:
+1. Click **Reply** beneath any client comment.
+2. Type your response (for example: *"Fixed in the next export!* or *"The audio here is raw; sound mix happens tomorrow"*).
+3. Reviewers viewing the link will see your reply threaded under their original note.
+
+---
+
+## Resolving Completed Tasks
+
+As you make edits in DaVinci Resolve or Premiere Pro, you can check items off your list:
+1. Hover over a comment and click the **Checkmark (Resolve)** button.
+2. The comment is dimmed or tucked into the "Resolved" tab.
+3. This keeps your active feedback panel focused on what still needs your attention.
+
+:::tip[Working with Multiple Clients]
+If multiple people from a client's team leave feedback, their notes all show up chronologically along the timeline with their chosen display names.
+:::
+
+<FeedbackWidget />

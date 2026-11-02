@@ -1,0 +1,52 @@
+---
+title: Understanding Quotas (Storage vs Delivery)
+description: The difference between stored gigabytes and monthly delivery bandwidth, and how Bunny Stream encoding works.
+sidebar:
+  order: 1
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+import PlanBadge from '../../../components/PlanBadge.astro';
+
+To keep CrewCut fast, affordable, and transparent, every plan includes two separate quotas: **Stored Video Capacity** and **Monthly Delivery Bandwidth**.
+
+---
+
+## 1. Stored Video Capacity (GB Stored)
+
+This is the total disk space your active videos occupy in your library.
+
+### The Bunny Stream Encoding Multiplier (~1.5×)
+When you upload a master video (for example, a 1 GB MP4 file), our video engine (Bunny Stream) encodes multiple web-friendly versions (360p, 720p, 1080p, and HLS streaming playlists) so that clients on slow mobile networks or fast broadband can both stream smoothly.
+
+Because of these extra streaming renditions:
+- Total stored bytes in your account are roughly **$\sim 1.5\times$** the raw file you uploaded.
+- For example, an uploaded 1 GB file takes about **1.5 GB** of stored space in your account.
+
+:::tip[Freeing Space Instantly]
+Whenever you delete an old or approved video from your Library, all its stored resolutions are immediately purged from the CDN, recovering your storage quota instantly.
+:::
+
+---
+
+## 2. Monthly Delivery Bandwidth (GB Streamed)
+
+Delivery bandwidth measures the data transferred over the global CDN when reviewers watch your cuts.
+
+- **Pro-rated Watch Time**: We only count bandwidth for the portions of the video your clients actually watch. If you send a 10-minute video (500 MB) and the client only watches 2 minutes, only $\sim 100$ MB of delivery bandwidth is consumed.
+- **Monthly Reset**: Your delivery bandwidth counter resets automatically on the first day of every billing cycle.
+
+---
+
+## Quotas by Plan
+
+| Plan | Stored Video Capacity | Monthly Delivery Bandwidth |
+|---|---|---|
+| <PlanBadge plan="Free" /> | **2 GB** | **4 GB** / month |
+| <PlanBadge plan="Starter" /> | **10 GB** | **20 GB** / month |
+| <PlanBadge plan="Plus" /> | **30 GB** | **60 GB** / month |
+| <PlanBadge plan="Studio" /> | **60 GB** | **120 GB** / month |
+
+Need more than 60 GB? Learn how to [request custom studio storage](/storage-bandwidth/requesting-storage/).
+
+<FeedbackWidget />

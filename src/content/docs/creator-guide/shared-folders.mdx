@@ -1,0 +1,45 @@
+---
+title: Shared Folders & Contributor Uploads
+description: Share playlists of cuts and allow clients or assistant editors to upload footage directly into your folders.
+sidebar:
+  order: 5
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+Sometimes a client project involves multiple cuts—like 10 short reels, 3 interview drafts, or different social aspect ratios (9:16 and 16:9). 
+
+Instead of sending 10 different links, you can share a single **Folder Link**.
+
+---
+
+## 1. Sharing a Folder Playlist
+
+1. Open your Library and locate your client folder.
+2. Click the **three dots (⋮)** menu on the folder card and choose **Share Folder**.
+3. Copy the public folder link.
+4. When your client opens this link, they see a clean playlist of all video cuts in that folder. They can click any cut to watch and leave timestamped feedback.
+
+:::note[Anonymous Playlist Viewing]
+Just like individual review cuts, clients do **not** need an account to browse and review cuts in a shared folder playlist.
+:::
+
+---
+
+## 2. Contributor Uploads (Allowing Clients to Upload)
+
+Need a client to send you raw video footage, or an assistant editor to upload their rough cut? You can enable **Contributor Uploads**:
+
+1. In the **Share Folder** window, toggle on **"Allow contributor uploads"**.
+2. When visitors open the shared folder link, they will see an **"Upload to this folder"** button.
+
+### How We Protect Your Account Quota
+To ensure no random bot or malicious user abuses your storage:
+- **Authentication Required for Uploaders**: While viewing is anonymous, uploading requires the contributor to sign in (via Google or Email Magic Link).
+- **Strict Guardrails**:
+  - Max file size for contributor uploads: **500 MB per file**.
+  - Rate limit: **Max 10 uploads per day** per contributor.
+  - Quota cap: Contributor uploads cannot exceed **25%** of your total plan quota.
+- **Moderation**: You receive an email alert whenever someone uploads to your folder. You can delete the file or revoke the contributor's link at any time.
+
+<FeedbackWidget />

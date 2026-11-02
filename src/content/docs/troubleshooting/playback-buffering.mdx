@@ -1,0 +1,40 @@
+---
+title: Playback & Buffering
+description: How adaptive video streaming works, fixing stuttering, and player browser compatibility.
+sidebar:
+  order: 2
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+When a reviewer opens your link, video playback is delivered over Bunny's global content delivery network (CDN) with low latency edge servers across India and worldwide.
+
+---
+
+## Adaptive Resolution Switching
+
+CrewCut players use **HLS (HTTP Live Streaming)**:
+- **Auto Quality**: The player automatically detects the viewer's network speed. If they are on a high-speed fiber connection, it serves 1080p or 4K. If they are on mobile data on a train, it drops smoothly to 720p or 480p to prevent pauses.
+- **Manual Resolution Switcher**: Viewers can click the **Gear (Settings)** icon in the video player to lock the resolution to 1080p, 720p, or 360p.
+
+---
+
+## Why is a Brand New Video Showing "Processing"?
+
+Immediately after an upload finishes:
+1. The video enters the cloud encoding queue.
+2. High-definition resolutions and timeline scrubbing preview thumbnails are generated.
+3. This usually takes between **30 seconds to 2 minutes** depending on the length of the cut.
+4. Once processing finishes, the status updates to **Ready** and the review link becomes active.
+
+---
+
+## Supported Browsers & Devices
+
+| Device | Supported Browsers | Notes |
+|---|---|---|
+| **Windows & Mac** | Chrome, Edge, Safari, Brave, Firefox | Full support for keyboard shortcuts (`Space`, `J/K/L`) |
+| **iPhone & iPad** | Mobile Safari, Chrome | Full touch scrubbing and mobile comment drawer |
+| **Android Phones** | Chrome, Samsung Internet | Smooth native hardware video decoding |
+
+<FeedbackWidget />
