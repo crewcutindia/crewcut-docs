@@ -1,46 +1,55 @@
 ---
-title: Security & Privacy
-description: How your video cuts are encrypted, protected from unauthorized downloads, and kept private.
+title: Security, Privacy & 2FA
+description: How your video cuts are encrypted, protected with signed CDN tokens, password-guarded, and secured with 2FA.
 sidebar:
   order: 3
 ---
 
 import FeedbackWidget from '../../../components/FeedbackWidget.astro';
 
-When working on unreleased commercial ads, confidential films, or sensitive client footage, security is critical.
+When handling unreleased commercial cuts, confidential feature films, or sensitive corporate video assets, privacy and protection are non-negotiable.
 
-Here is how CrewCut safeguards your video media and data.
-
----
-
-## 1. Token-Authenticated Video Delivery
-
-Your video files are never exposed via public static URLs. 
-- Every video stream is guarded by **Bunny Token Authentication** with SHA256 hashed signatures.
-- Tokens expire on-demand and are tied to your specific review session.
-- Third parties cannot scrape, leech, or hotlink your video stream into external players.
+Here is how CrewCut secures your creative media and data.
 
 ---
 
-## 2. Review Links Are Secret URLs
+## 1. Token-Authenticated Video Streaming
 
-Review links use cryptographically random high-entropy identifiers (e.g. `/review/v/7f9a2b8e...`):
-- They are **unlisted**: search engines like Google and Bing are instructed never to index review pages.
-- Only people you give the link to can view the cut.
-- If you ever need to revoke access, simply delete the video from your library. The link goes dead instantly.
-
----
-
-## 3. Strict Download Controls
-
-- Reviewer downloads are **disabled by default**.
-- Unless you specifically toggle on **"Allow file download"** in the share modal, there is no download button for viewers.
+Your video assets are never exposed via unauthenticated public URLs:
+- **Expiring HMAC-SHA256 Signatures:** Every video stream and download request is protected by cryptographic tokens signed with time-limited expiration.
+- **Hotlink & Leech Defense:** External scrapers or unauthorized third parties cannot hotlink or rip your video streams.
 
 ---
 
-## 4. Account & Payment Data Security
+## 2. Password Protection & Link Expiry
 
-- **Database & Auth**: Hosted on Supabase with Row Level Security (RLS) enabled across all tables, ensuring only authenticated video owners can modify their assets.
-- **Payment Security**: Razorpay handles all card, UPI, and bank transactions with RBI-mandated PCI-DSS Level 1 compliance. CrewCut never sees or stores your credit card numbers or UPI PINs.
+In addition to unlisted, high-entropy review URLs:
+- **Passcode Protection:** You can set a private passcode on any video or folder review link. Viewers must enter the passcode before the player decrypts and streams.
+- **Expiry Dates:** Configure review links to automatically self-destruct after a specified date.
+- **Instant Revocation:** Toggling off a review link immediately invalidates access for all external viewers.
+
+---
+
+## 3. Two-Factor Authentication (TOTP 2FA)
+
+Protect your creator account against credential compromise:
+1. Go to **Settings** &rarr; **Security** in [app.crewcut.in](https://app.crewcut.in).
+2. Enable **Two-Factor Authentication (2FA)**.
+3. Scan the QR code using Google Authenticator, 1Password, or Authy.
+4. Save your emergency backup recovery codes.
+
+---
+
+## 4. Microphone Privacy & Voice Notes
+
+- Microphones are accessed **only** when you or a reviewer explicitly click the microphone icon to record a voice note.
+- Browsers enforce visual recording indicators (orange/red dot in address bar).
+- Audio recordings are processed securely and deleted automatically when the parent comment or video cut is removed.
+
+---
+
+## 5. Compliance & Legal Policies
+
+For full regulatory compliance details under India's Digital Personal Data Protection Act, 2023 (DPDP Act), IT Intermediary Rules, and Data Processing Addendums (DPA), visit our [Official Legal Portal](https://legal.crewcut.in).
 
 <FeedbackWidget />

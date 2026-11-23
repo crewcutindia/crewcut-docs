@@ -26,6 +26,8 @@ export default defineConfig({
             { label: 'Uploading Videos', slug: 'creator-guide/uploading-videos' },
             { label: 'Folders & Library', slug: 'creator-guide/library-and-folders' },
             { label: 'Sharing Review Links', slug: 'creator-guide/sharing-cuts' },
+            { label: 'Companion Assets (Drive)', slug: 'creator-guide/companion-assets' },
+            { label: 'Direct Video Downloads', slug: 'creator-guide/direct-downloads' },
             { label: 'Managing Comments', slug: 'creator-guide/managing-feedback' },
             { label: 'Shared Folders & Uploads', slug: 'creator-guide/shared-folders' },
           ],
@@ -34,16 +36,23 @@ export default defineConfig({
           label: 'Reviewer Guide (Zero Login)',
           items: [
             { label: 'Reviewing a Video Cut', slug: 'reviewer-guide/reviewing-a-cut' },
+            { label: 'Voice Notes & Visual Drawing', slug: 'reviewer-guide/voice-notes-and-annotations' },
             { label: 'Timestamped Feedback', slug: 'reviewer-guide/timestamped-feedback' },
             { label: 'Email Update Alerts', slug: 'reviewer-guide/email-notifications' },
+          ],
+        },
+        {
+          label: 'Integrations & Plugins',
+          items: [
+            { label: 'Adobe Premiere Pro & After Effects', slug: 'integrations/adobe-plugins' },
           ],
         },
         {
           label: 'Storage & Bandwidth',
           items: [
             { label: 'Understanding Quotas', slug: 'storage-bandwidth/understanding-quotas' },
+            { label: 'Storage Add-on Packs', slug: 'storage-bandwidth/storage-addons' },
             { label: 'Delivery Limits & Protection', slug: 'storage-bandwidth/delivery-limits' },
-            { label: 'Requesting Extra Storage', slug: 'storage-bandwidth/requesting-storage' },
           ],
         },
         {
@@ -57,7 +66,7 @@ export default defineConfig({
         {
           label: 'Troubleshooting & FAQ',
           items: [
-            { label: 'Upload Issues & Resuming', slug: 'troubleshooting/upload-issues' },
+            { label: 'Upload & Download Issues', slug: 'troubleshooting/upload-issues' },
             { label: 'Playback & Buffering', slug: 'troubleshooting/playback-buffering' },
             { label: 'Security & Privacy', slug: 'troubleshooting/security-and-privacy' },
           ],

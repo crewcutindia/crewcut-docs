@@ -1,56 +1,63 @@
 ---
-title: Supported Video Formats
-description: Video containers, codecs, resolutions, and recommendations for fast exports and smooth streaming.
+title: Supported Video & Asset Formats
+description: Video containers, codecs, 4K/8K HDR playback, and supported companion assets (audio stems, project files, graphics).
 sidebar:
   order: 3
 ---
 
 import FeedbackWidget from '../../../components/FeedbackWidget.astro';
 
-CrewCut accepts almost any video format exported from popular editing suites like Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro, CapCut, and After Effects.
+CrewCut accepts standard video formats exported from Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro, CapCut, and After Effects, as well as companion production files.
 
 ---
 
-## Supported File Containers
+## 1. Supported Video Formats & Codecs
 
-| Container Format | File Extension | Status | Recommended Settings |
-|---|---|---|---|
+| Container Format | File Extension | Transcoding Status | Recommended Export Settings |
+| :--- | :--- | :--- | :--- |
 | **MP4** | `.mp4` | **Best (Recommended)** | H.264 or H.265 (HEVC), AAC Audio |
-| **QuickTime** | `.mov` | Supported | ProRes 422, H.264, or Animation codec |
+| **QuickTime** | `.mov` | Supported | Apple ProRes 422, H.264, or Animation |
 | **WebM** | `.webm` | Supported | VP9 or AV1, Opus audio |
-| **MPEG-TS / MKV** | `.mkv`, `.ts` | Supported | Web-standard codecs |
+| **MKV / TS** | `.mkv`, `.ts` | Supported | Standard web video streams |
 
 ---
 
-## Export Recommendations for Fastest Uploads
+## 2. High Dynamic Range & Resolutions
 
-When you are sending a draft cut for client review, speed is key:
-
-1. **Resolution**: 1080p (Full HD) is standard for quick reviews and uploads smoothly on mobile networks. 4K is also supported if your plan has enough storage.
-2. **Codec**: **H.264** provides the fastest browser upload and instant web transcoding.
-3. **Bitrate**: 
-   - 1080p: Target **10–15 Mbps** (VBR 1-pass).
-   - 4K: Target **25–40 Mbps**.
-4. **Audio**: Stereo AAC at **192 kbps** or **320 kbps**, 48 kHz.
-
-:::tip[Export Presets in DaVinci & Premiere]
-In DaVinci Resolve or Premiere Pro, selecting the **"YouTube 1080p"** or **"Vimeo 1080p"** export preset creates the sweet spot between crisp image quality and compact file size.
-:::
+- **Resolutions:** From standard 720p / 1080p Full HD up to **4K UHD** and **8K Ultra HD** playback.
+- **HDR & Dolby Vision:** Full color-accurate HDR and Dolby Vision playback preservation when uploaded from supported NLE workflows.
+- **Aspect Ratios:** Standard 16:9 widescreen, 1:1 square, and **9:16 vertical** (automatically triggers vertical Reels review layout on mobile and desktop).
 
 ---
 
-## File Size Limits
+## 3. Supported Companion Assets (CrewCut Drive)
 
-- **Free Tier**: Up to the remaining free storage in your account (2 GB total account cap).
-- **Starter, Plus, and Studio**: Single files up to **10 GB** per cut.
-- **Contributor Uploads**: Shared folder uploads from guests are capped at **500 MB** per file to prevent quota exhaustion.
+You can upload non-video production assets directly into your project folders:
+
+- **Audio Stems:** `.wav`, `.mp3`, `.aac`, `.flac`, `.aiff`
+- **Project Archives:** `.prproj` (Premiere Pro), `.aep` (After Effects)
+- **Design & Thumbnails:** `.psd` (Photoshop), `.png`, `.jpg`, `.svg`, `.webp`
+- **Documents & Briefs:** `.pdf`, `.docx`, `.txt`
+- **Typography:** `.otf`, `.ttf`, `.woff2`
 
 ---
 
-## What Happens After You Upload?
+## 4. Export Presets for Rapid Uploads
 
-Once your file finishes uploading, our cloud video pipeline (Bunny Stream) encodes your video into adaptive bitrate streaming (HLS). This means:
-- Clients on fast Wi-Fi automatically get crisp, high-definition playback.
-- Clients on mobile data stream smoothly without stuttering or buffering.
+For quick client review cycles, fast uploads save time:
+1. **Resolution:** 1080p is optimal for daily review cuts. 4K is ideal for final color and master sign-offs.
+2. **Codec:** **H.264** delivers the fastest browser upload and instantaneous cloud transcoding.
+3. **Bitrate:**
+   - 1080p: **10–15 Mbps** (VBR 1-pass).
+   - 4K: **25–40 Mbps**.
+4. **DaVinci & Premiere Presets:** The **"YouTube 1080p"** or **"Vimeo 1080p"** presets offer the best balance of visual fidelity and compact file size.
+
+---
+
+## 5. File Size Limits by Tier
+
+- **Free Tier:** Up to available account storage (5 GB total account quota).
+- **Starter, Plus, & Studio Tiers:** Single file uploads up to **10 GB** per master cut.
+- **Contributor Review Uploads:** Contributor uploads through shared folder links are capped at **1 GB** per file to protect the folder owner's storage headroom.
 
 <FeedbackWidget />

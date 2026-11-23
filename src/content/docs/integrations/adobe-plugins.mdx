@@ -1,0 +1,67 @@
+---
+title: Adobe Premiere Pro & After Effects
+description: Seamlessly synchronize client comments and voice feedback as native timeline markers in Adobe Premiere Pro and After Effects.
+sidebar:
+  order: 1
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+Stop switching back and forth between your web browser and your editing timeline. The official **CrewCut Adobe Extension** brings client feedback, frame-accurate notes, and reviewer comments directly into your Adobe Premiere Pro and After Effects sequences.
+
+---
+
+## 1. Extension Capabilities
+
+- **Native Timeline Markers:** Converts client comments into native timeline sequence markers with exact timecode alignment.
+- **Marker Color Coding:** Unresolved feedback appears as yellow markers; approved/resolved notes turn green.
+- **Comment Metadata:** Double-clicking any marker reveals the reviewer's name, timestamp, comment text, and a direct link to listen to their voice note.
+- **Two-Way Sync:** Mark comments as resolved directly inside Premiere Pro or After Effects, and CrewCut instantly updates the review link for your client.
+
+---
+
+## 2. Installation & Setup
+
+### Step 1: Download the Extension
+Download the latest `CrewCut-Adobe-v1.0.zxp` package from your [CrewCut Account Settings](https://app.crewcut.in/settings/plugins).
+
+### Step 2: Install via Extension Manager
+You can install the `.zxp` file using any standard extension installer:
+1. Open **Anastasiy’s Extension Manager** or **ZXP Installer** (both free for Windows & macOS).
+2. Drag and drop `CrewCut-Adobe-v1.0.zxp` into the manager window.
+3. Restart Adobe Premiere Pro or After Effects.
+
+### Step 3: Open the Panel
+1. Inside Premiere Pro or After Effects, navigate to the top menu bar:
+   `Window` &rarr; `Extensions` &rarr; `CrewCut Review`.
+2. Dock the CrewCut panel anywhere in your workspace (such as next to the Effect Controls or Project panel).
+
+---
+
+## 3. Connecting to Your Workspace
+
+1. In the extension panel, click **Sign In**.
+2. A secure browser window opens in [app.crewcut.in](https://app.crewcut.in) to generate your plugin access token.
+3. Click **Authorize Extension**. Your project folders and video cuts will immediately populate inside the Adobe panel.
+
+---
+
+## 4. Synchronizing Markers with Your Active Sequence
+
+1. Open your timeline sequence in Premiere Pro or composition in After Effects.
+2. In the CrewCut panel, select the video cut that corresponds to your timeline.
+3. Click **Sync Markers to Sequence**:
+   - The extension reads the timecode offset of your sequence.
+   - All reviewer comments are created as sequence markers at the exact corresponding frames.
+4. Use standard Premiere shortcuts (`Shift + M` to jump to the next marker; `Ctrl + Shift + M` to go to the previous marker) to fly through client revisions.
+
+---
+
+## 5. Resolving Feedback
+
+As you make each requested cut:
+1. In the CrewCut extension panel, check the box next to the comment to mark it as **Resolved**.
+2. The sequence marker turns green on your timeline.
+3. Your client's review link updates in real time, letting them know revision notes have been addressed.
+
+<FeedbackWidget />

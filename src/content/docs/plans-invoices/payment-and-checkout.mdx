@@ -1,42 +1,49 @@
 ---
 title: Payment & Checkout
-description: How one-time Razorpay orders work, supported payment methods, and renewing your plan.
+description: Secure checkout via Razorpay, UPI Autopay, card mandates, cancellation policies, and refund rules.
 sidebar:
   order: 2
 ---
 
 import FeedbackWidget from '../../../components/FeedbackWidget.astro';
 
-CrewCut uses **Razorpay** to process all payments securely across India.
+CrewCut partners with **Razorpay Software Private Limited** to process all transactions on PCI-DSS Level 1 compliant infrastructure across India.
 
 ---
 
-## Supported Payment Methods
+## 1. Supported Payment Methods
 
-When checking out through Razorpay, you can pay via:
-- **UPI** (Google Pay, PhonePe, Paytm, BHIM, Cred)
-- **Credit & Debit Cards** (Visa, Mastercard, RuPay, Amex)
-- **Netbanking** (All major Indian private and PSU banks)
-- **Wallets** (Paytm Wallet, Mobikwik, etc.)
+When checking out on CrewCut, you can pay via:
+- **UPI & UPI Autopay:** Google Pay, PhonePe, Paytm, BHIM, Cred, and bank UPI apps.
+- **Credit & Debit Cards:** Visa, MasterCard, RuPay, and American Express.
+- **NetBanking:** Over 50 Indian scheduled private and public banks.
 
----
-
-## One-Time Orders (No Surprise Auto-Debits)
-
-To respect your financial control:
-- In CrewCut, checkout creates a **one-time 30-day order**. 
-- We do not mandate hidden recurring subscriptions or auto-charge your credit card unexpectedly.
-- When your 30-day period is coming to a close, your billing dashboard will show a friendly reminder:
-  > *"Renew before [Date] to keep your plan active."*
-
-:::tip[What Happens if You Don't Renew on Time?]
-If your plan expires, your videos are never deleted right away. Your account simply reverts to the Free tier limits. To restore active review links and higher storage, you can renew your plan at any time with a single click.
-:::
+CrewCut never collects, transmits, or stores credit card numbers, CVVs, or UPI PINs on its servers.
 
 ---
 
-## Upgrading Mid-Cycle
+## 2. Subscriptions & Billing Cycles
 
-If you start on the Starter tier (₹199) and realize you need more storage for a big commercial shoot, you can upgrade directly to Plus (₹499) or Studio (₹999) from your **Billing** tab. Your storage quota expands immediately upon payment confirmation.
+- **Monthly Billing:** Subscriptions are billed in advance every 30 days.
+- **Auto-Renewal & Control:** If you set up UPI Autopay or a card mandate, your subscription renews automatically so your client review links remain uninterrupted.
+- **Cancel Anytime:** You can cancel auto-renewal at any time with a single click in **Settings** &rarr; **Billing**. When cancelled, you retain full tier benefits until the end of your current prepaid period.
+
+---
+
+## 3. Storage Add-on Packs (Non-Recurring)
+
+Unlike base monthly subscriptions, **Storage Add-on Packs** (Seed, Lite, Basic, Standard) are one-time 30-day purchases. They do not auto-renew and automatically lapse after 30 days unless manually renewed.
+
+---
+
+## 4. Refund Policy Summary
+
+Because cloud storage allocations and high-speed transcoding resources are provisioned immediately upon transaction confirmation, paid subscriptions and add-on packs are **non-refundable**.
+
+Full refunds are granted exclusively for:
+1. Technical errors resulting in duplicate charges for the same billing period.
+2. Verified unauthorized or fraudulent transactions reported to support within 7 calendar days.
+
+For complete terms, review our [Payments, Cancellation & Refunds Policy](https://legal.crewcut.in/paymentsandrefunds).
 
 <FeedbackWidget />

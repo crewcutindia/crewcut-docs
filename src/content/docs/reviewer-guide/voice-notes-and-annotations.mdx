@@ -1,0 +1,58 @@
+---
+title: Voice Notes & Visual Drawing
+description: How to leave 100-second audio voice notes and draw directly on video frames for intuitive feedback.
+sidebar:
+  order: 2
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+Sometimes typing a paragraph isn't enough to explain complex pacing, tone, or visual edits. CrewCut allows reviewers and creators to record in-browser **Voice Notes** and draw directly on the video canvas.
+
+---
+
+## 1. Recording 100-Second Voice Notes
+
+You can record up to **100 seconds** of crystal-clear voice feedback attached to an exact video timestamp.
+
+### How to Record a Voice Note:
+1. **Pause the video** at the moment you want to discuss.
+2. In the comment input area, click the **Microphone icon** (`🎙️ Record Voice Note`).
+3. If prompted by your browser, click **Allow** to grant microphone access.
+4. Speak your feedback. A live waveform and countdown timer will track your recording.
+5. Click **Stop** when finished, or let the timer reach 100 seconds.
+6. Click **Play** to preview your voice note before posting.
+7. Click **Send** to publish.
+
+### Playback & Waveform:
+- Each voice note appears in the feedback stream with an interactive audio waveform and a duration badge (e.g. `00:42 / 01:40`).
+- Clicking the play button plays the audio note while keeping the video frame locked at the feedback timestamp.
+- Voice notes can be played on both desktop and mobile browsers without downloading external files.
+
+---
+
+## 2. Drawing Directly on Video Frames
+
+To point out exact visual details—such as cropping an object, moving a lower third, or pointing out color banding—use the on-screen drawing tools:
+
+1. **Pause the player** on the specific frame you want to annotate.
+2. Click the **Pencil / Draw icon** located in the player toolbar.
+3. Choose your tool:
+   - **Arrow:** Draw a direct pointer pointing to a subject or logo.
+   - **Freehand Pen:** Circle text, highlight edges, or sketch revisions.
+   - **Rectangle / Box:** Frame an area that needs repositioning.
+4. Add an optional text comment to accompany your drawing and hit **Submit**.
+5. When anyone clicks that comment timestamp, the canvas drawing overlays onto the video frame automatically.
+
+---
+
+## 3. 9:16 Vertical Mode (Reels & Shorts)
+
+When reviewing vertical videos (Instagram Reels, YouTube Shorts, or TikTok ads):
+
+- CrewCut automatically detects 9:16 aspect ratios and adjusts the player layout.
+- On mobile devices, the player expands to fill the vertical viewport with an edge-to-edge touch scrubber.
+- On desktop, the player centers the vertical cut with a dedicated side feedback rail, preventing awkward pillarboxing.
+- Voice notes and timestamped annotations work seamlessly on both mobile and desktop screens.
+
+<FeedbackWidget />

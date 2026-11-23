@@ -1,40 +1,39 @@
 ---
-title: Upload Issues & Resuming
-description: Troubleshooting interrupted uploads, slow network speeds, and browser tips.
+title: Upload & Download Issues
+description: Troubleshooting interrupted uploads, streaming download prompts, network drops, and storage alerts.
 sidebar:
   order: 1
 ---
 
 import FeedbackWidget from '../../../components/FeedbackWidget.astro';
 
-If your video upload seems stuck or is taking longer than expected, here is how to resolve it quickly.
+If your video upload seems stuck or a video download prompt doesn't appear, here is how to resolve it quickly.
 
 ---
 
 ## 1. What to Do if an Upload Pauses
 
-Because CrewCut uses the **TUS resumable upload protocol**, temporary network drops do not destroy your upload progress.
-
-- **Check Your Internet Connection**: If you are on Wi-Fi or a mobile hotspot, confirm your connection is active.
-- **Keep the Tab Open**: Do not close or hard-refresh the tab while the progress bar shows an active upload. If the connection reconnects within a few minutes, the upload automatically continues.
-- **If It Gets Stuck for Over 5 Minutes**: Refresh the page, select the exact same file again, and click upload. The uploader checks the server chunk cache and resumes from where it stopped.
-
----
-
-## 2. Speeding Up Slow Uploads
-
-If uploading a 2 GB file is taking too long:
-1. **Switch Codec to H.264**: ProRes or uncompressed QuickTime files are enormous (often 10–20 GB for a short video). Exporting an H.264 draft cut at 12–15 Mbps reduces file size by 80% with virtually no visible difference on client screens.
-2. **Disable Heavy VPNs**: Some VPNs throttle large video transfers. Try pausing your VPN during the upload.
-3. **Use Google Chrome or Brave**: Modern Chromium browsers have the most efficient stream chunk buffers for large file transfers.
+CrewCut uses resumable chunk uploads directly to our edge network:
+- **Keep the Tab Open:** If your Wi-Fi or mobile hotspot drops temporarily, do not close the tab. Once connection returns, the upload automatically continues.
+- **Resuming a Stalled Upload:** If an upload freezes for over 3 minutes, refresh the page and select the exact same file again. The uploader verifies existing chunks and resumes from where it left off.
+- **Export Tips:** Exporting an H.264 MP4 cut at 12–15 Mbps reduces file size by 80% compared to ProRes, saving upload time with zero perceptible quality difference for client review.
 
 ---
 
-## 3. "Storage Quota Exceeded" Error
+## 2. Resolving Download Prompts & Issues
 
-If an upload fails with a quota alert:
+When you or a reviewer clicks **Download Video**:
+- **Save File Dialog:** The streaming Service Worker prompts your native browser download manager immediately. If no download begins, check whether your browser is blocking automatic download popups for `app.crewcut.in`. Click the permissions icon in your URL bar and select **Allow automatic downloads**.
+- **Rate Limit Alerts:** If you trigger multiple rapid downloads in succession, you may receive a rate-limit notice (5 downloads per minute). Wait 60 seconds before initiating the next download.
+- **Permissions Disabled:** If the download button is missing on a review link, the creator has disabled file downloads in the review link settings. Contact the video owner to enable download permissions.
+
+---
+
+## 3. Storage Quota Exceeded
+
+If an upload fails with a storage quota notification:
 - Check your remaining account storage on your dashboard.
-- Remember the **$\sim 1.5\times$ Bunny encoding rule**: if your file is 1 GB, your account needs $\sim 1.5$ GB of available room for the transcoded web renditions.
-- Delete older completed cuts or [upgrade your plan](/plans-invoices/pricing-plans/) to increase your storage.
+- Delete completed cuts or obsolete companion assets to free up space.
+- Alternatively, activate an instant [Storage Add-on Pack](/storage-bandwidth/storage-addons/) (+10 GB, +25 GB, +30 GB, or +50 GB) for immediate headroom.
 
 <FeedbackWidget />

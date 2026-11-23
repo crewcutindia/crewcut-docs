@@ -1,0 +1,53 @@
+---
+title: Direct Video Downloads
+description: Fast, native browser streaming downloads for master cuts and proxies, download permissions, and fair-use limits.
+sidebar:
+  order: 5
+---
+
+import FeedbackWidget from '../../../components/FeedbackWidget.astro';
+
+CrewCut features an edge-streaming download architecture that pipes master video files and transcoded proxy cuts directly into your browser's native download manager at maximum connection speed.
+
+---
+
+## 1. How Video Downloads Work
+
+Unlike traditional web tools that force the browser to buffer an entire multi-gigabyte video into memory before prompting you to save, CrewCut uses a streaming Service Worker pipeline:
+
+- **Immediate Save Dialog:** As soon as you click **Download**, your browser prompts you with the standard Save File dialog.
+- **Native Browser Download:** The download streams directly into your browser's download manager, showing accurate transfer speed, downloaded bytes, and remaining time.
+- **Zero Memory Bottleneck:** You can download 10 GB+ master 4K cuts without your browser tab freezing or crashing.
+
+---
+
+## 2. Choosing Download Resolutions
+
+When you or your reviewers click the download button, CrewCut provides resolution options based on your workflow:
+
+- **Original Master Cut:** The pristine mezzanine video file uploaded by the creator (retains full bitrate, HDR/Dolby Vision metadata, and multi-channel audio).
+- **Proxy Rendition (720p / 1080p):** A compressed, lightweight MP4 file ideal for rapid sharing, client previews on low-bandwidth connections, or offline offline mobile viewing.
+
+---
+
+## 3. Controlling Download Permissions on Review Links
+
+As the project owner, you have full control over who can download your files:
+
+1. Open your video or folder in [app.crewcut.in](https://app.crewcut.in).
+2. Click **Share Link** to open review settings.
+3. Toggle **"Allow Video Downloads"**:
+   - **Enabled:** Reviewers will see a download button in the player bar and can download the original or proxy cuts.
+   - **Disabled:** The download button is hidden, and download API endpoints are locked for that link, restricting viewers to streaming playback only.
+
+---
+
+## 4. Fair-Use Download Rate Limits
+
+To protect video creators against bandwidth abuse and bot scraping, download requests are protected by automated fair-use rate limiting:
+
+- **Rate Limit Window:** Up to 5 download requests per minute per IP address.
+- **Active Concurrency:** Maximum of 2 concurrent high-bandwidth download streams per session.
+- **Signed Tokens:** All download links use cryptographically signed, expiring URLs that prevent unauthorized hotlinking.
+
+<FeedbackWidget />
